@@ -22,6 +22,7 @@
     <!-- Template Main CSS File -->
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/search.css" rel="stylesheet" />
+    <link href="css/result-card.css" rel="stylesheet" />
 
     <title>Binar Car Rental</title>
   </head>
@@ -129,8 +130,8 @@
             <p>Tipe Driver</p>
             <select class="form-select" id="inputTipeDriver">
               <option class="item" selected>Pilih Tipe Driver</option>
-              <option class="item" value="1">Dengan Sopir</option>
-              <option class="item" value="2">Tanpa Sopir (Lepas Kunci)</option>
+              <option class="item" value="true">Dengan Sopir</option>
+              <option class="item" value="false">Tanpa Sopir (Lepas Kunci)</option>
             </select>
           </div>
           <div class="input-group d-flex flex-column">
@@ -144,22 +145,55 @@
           <div class="input-group d-flex flex-column">
             <p>Jumlah Penumpang (Opsional)</p>
             <div class="d-flex flex-row">
-
               <input type="number" class="form-control item">
               <i class="bi bi-people-fill input-group-append people-icon"></i>
             </div>
           </div>
         
-          <button type="submit" class="btn button-search">Cari Mobil</button>
+          <button type="submit" class="btn button-search" id="load-btn">Cari Mobil</button>
         </div>
-       
-      </section>
+    </section>
     <!-- /search bar -->
 
+    <!-- card result -->
+    <div class="result-container">
+      <div class="result" id="body">
+        <!-- <div class="car">
+          <img src="./images/car01.min.jpg" alt="">
+          <p>Nama/Tipe Mobil</p>
+          <h5>Rp 430.000 / hari</h5>
+          <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h6>
+          <h6><i class="fa fa-user-o" aria-hidden="true"></i>4 orang</h6>
+          <h6><i class="fa fa-cogs" aria-hidden="true"></i>Manual</h6>
+          <h6><i class="fa fa-calendar-o" aria-hidden="true"></i>Tahun 2020</h6>
+          <button>Pilih Mobil</button>
+        </div>
+        <div class="car">
+          <img src="" alt="">
+          
+        </div>
+        <div class="car">
+          <img src="" alt="">
+          
+        </div>
+        <div class="car">
+          <img src="" alt="">
+          
+        </div>
+        <div class="car">
+          <img src="" alt="">
+          
+        </div> -->
+      
+      </div>
+    </div>
+    <!-- /card result -->
+
+
     <!--  -->
-    <button id="load-btn">Load</button>
+    <!-- <button id="load-btn">Load</button>
     <button id="clear-btn">Clear</button>
-    <div id="cars-container"></div>
+    <div id="cars-container"></div> -->
 
     <!-- Example Javascript -->
     <script type="text/javascript" src="scripts/binar.js"></script>
@@ -226,6 +260,14 @@
     ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js" integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- import handle input -->
+    <script src="scripts/handleInput.js"></script>
+    <script src="scripts/cars.js"></script>
+
+
+    
+    
     <!-- <script>
     function myFunction1() {
       document.getElementById("myDropdown1").classList.toggle("show");
